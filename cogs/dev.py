@@ -68,5 +68,15 @@ async def stop(ctx):
       await asyncio.sleep(1)
       await bot.close()
       
+@bot.command(pass_context=True)
+async def servers(ctx):
+    if ctx.message.author.id == "371001497342836737":
+      x = ', '.join([str(server) for server in bot.servers])
+      y = len(bot.servers)
+      embed = discord.Embed(description = "```json\n" + x + "```", color = 0xff0000, timestamp = datetime.datetime.utcnow())
+      embed.set_author(name = "All the servers I'm in: " + str(y), icon_url = "https://cdn.discordapp.com/attachments/379454585808617472/389255356636987394/20171206_140705.jpg")
+      embed.set_footer(text = "| © Cosmos ", icon_url = "https://cdn.discordapp.com/attachments/379454585808617472/389255356636987394/20171206_140705.jpg")
+      await bot.say(embed = embed) 
+       
 def setup(bot): 
     bot.add_cog(Dev(bot))
