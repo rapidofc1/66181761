@@ -20,4 +20,5 @@ from bs4 import BeautifulSoup
 import ftfy
 #You don't need all these imports for this file, just was lazy ;p
 
-
+def setup(bot): 
+    bot.add_cog(Fun(bot))
