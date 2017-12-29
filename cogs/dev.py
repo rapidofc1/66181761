@@ -8,8 +8,6 @@ import traceback
 import os
 import sys
 import sqlite3
-import discord
-from discord.ext import commands
 import random
 import asyncio
 from datetime import datetime
@@ -21,6 +19,8 @@ import time
 from bs4 import BeautifulSoup
 import ftfy
 #You don't need all these imports for this file, just was lazy ;p
+
+bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
 
 @bot.command(pass_context=True)
 async def message(ctx, user : discord.Member, *, message: str):
