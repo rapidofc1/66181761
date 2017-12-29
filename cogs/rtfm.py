@@ -1,4 +1,3 @@
-import openweathermapy.core as weather
 import unicodedata
 import youtube_dl
 import pyowm
