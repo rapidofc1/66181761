@@ -412,4 +412,4 @@ async def help_8ball():
     await bot.say(embed = h)
         
 def setup(bot): 
-    bot.add_cog(Core(bot))
+        bot.add_cog(Core(bot))
