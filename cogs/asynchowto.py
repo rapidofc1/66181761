@@ -20,6 +20,8 @@ from bs4 import BeautifulSoup
 import ftfy
 #You don't need all these imports for this file, just was lazy ;p
 
+bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
+
 @bot.command(pass_context=True)
 async def tutinfo(ctx):
     embed = discord.Embed(title = "Cosmos Commands", color = 0xfffa02, timestamp = datetime.datetime.utcnow())
