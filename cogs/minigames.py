@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-openweathermapy.core as weather
 import unicodedata
 import youtube_dl
 import pyowm
