@@ -106,4 +106,4 @@ async def tutTERMUX():
     await bot.say(embed = embed)
     
 def setup(bot): 
-    bot.add_cog(Asynchowto(bot))
+        bot.add_cog(Asynchowto(bot))
