@@ -370,4 +370,4 @@ async def neko():
     await bot.say(embed=neko)
     
 def setup(bot): 
-    bot.add_cog(Fun(bot))
+        bot.add_cog(Fun(bot))
