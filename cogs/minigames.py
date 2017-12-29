@@ -81,4 +81,4 @@ async def slots(ctx):
     await bot.edit_message(embed, embed=discord.Embed(color=0xffffff, description=f'**:slot_machine: | {ctx.message.author.name} rolled the slots...\nSpinning...\n------{ctx.message.author.name}------\n`{a} | {b} | {c}`\n{message}**'))
     
 def setup(bot): 
-    bot.add_cog(Minigames(bot))
+        bot.add_cog(Minigames(bot))
