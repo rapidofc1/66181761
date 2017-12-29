@@ -36,4 +36,4 @@ async def rtfm_async():
     await bot.say("**:mag_right: | http://discordpy.readthedocs.io/en/async/**")
 
 def setup(bot): 
-    bot.add_cog(Rtfm(bot))
+        bot.add_cog(Rtfm(bot))
