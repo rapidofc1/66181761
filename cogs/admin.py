@@ -151,5 +151,41 @@ async def clearnicks(ctx):
         if 'Privellage is too low' in str(e):
             pass
         
+@bot.command(pass_context=True)
+async def setup_starboard(ctx):
+    if not ctx.message.author.server_permissions.administrator:
+      return await bot.say("**:x: | You cannot do that, get the owner or administrator to do this.**")
+    await bot.create_channel(ctx.message.server, 'starboard', type=discord.ChannelType.text)
+    await bot.say("**:white_check_mark: | I've made the channel, now IN THAT CHANNEL type `?config_starboardid`**")
+    
+@bot.command(pass_context=True)
+async def config_starboardid(ctx):
+    if not ctx.message.author.server_permissions.administrator:
+      return await bot.say("**:x: | You cannot do that, get the owner or administrator to do this.**")
+    embed = discord.Embed(color = 0xffffff, title = "Starboard Request!") #, description = "Starboard ID: {}".format(message))
+    embed.add_field(name = "Server", value = ctx.message.server.name)
+    embed.add_field(name = "Server ID", value = ctx.message.server.id)
+    embed.add_field(name = "Server User Count", value = ctx.message.server.member_count)
+    embed.add_field(name = "Server Owner", value = ctx.message.server.owner)
+    embed.add_field(name = "Channel Name", value = ctx.message.channel.name)
+    embed.add_field(name = "Channel ID", value = ctx.message.channel.id)
+    embed.add_field(name = "Requester", value = ctx.message.author.name)
+    embed.set_thumbnail(url = ctx.message.server.icon_url)
+    await bot.send_message(bot.get_channel("379454585808617472"), content = "**Channel ID: " + ctx.message.channel.id + "**", embed = embed)
+    await bot.say("**:white_check_mark: | Starboard request sent, now make sure no one can actually type in this channel.\nREMINDER:  I will only accept this request if the channel name is 'starboard'**")
+        
+@bot.command(aliases=["getbans", "bans"], pass_context=True)
+async def gbans(ctx):
+    if not ctx.message.author.server_permissions.administrator:
+      return await bot.say("**:x: | Insufficient permissions.**")
+    x = await bot.get_bans(ctx.message.server)
+    x = '\n'.join([y.name for y in x])
+    if x == None:
+      embed = discord.Embed(title = "Banned Members for {}".format(ctx.message.server.name), description = "No bans, squeeky clean! ;)", color = 0x596ff)
+      await bot.say(embed = embed)
+    else:
+        embed = discord.Embed(title = "Banned Members for {}".format(ctx.message.server.name), description = x, color = 0x596ff)
+        await bot.say(embed = embed)
+        
 def setup(bot): 
     bot.add_cog(Admin(bot))
