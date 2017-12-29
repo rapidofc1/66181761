@@ -176,8 +176,6 @@ async def urband(*msg):
                 embed.add_field(name = "Examples:", value = response['list'][0]["example"][:1000])
                 embed.set_footer(text = "Tags: " + ', '.join(response['tags']))
                 await bot.say(embed = embed)
-                
-
 
 def setup(bot): 
     bot.add_cog(Utility(bot))
