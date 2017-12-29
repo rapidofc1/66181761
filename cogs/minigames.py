@@ -1,4 +1,6 @@
-import openweathermapy.core as weather
+import discord
+from discord.ext import commands
+openweathermapy.core as weather
 import unicodedata
 import youtube_dl
 import pyowm
@@ -6,8 +8,6 @@ import traceback
 import os
 import sys
 import sqlite3
-import discord
-from discord.ext import commands
 import random
 import asyncio
 from datetime import datetime
