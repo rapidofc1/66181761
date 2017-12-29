@@ -41,7 +41,7 @@ async def on_ready():
     print("⭐Bot Ready⭐")
     print("------------")
     
-startup_extensions = ["cogs.dev", "cogs.fun", "cogs.misc", "cogs.admin", "cogs.utility", "cogs.core", "cogs.minigames", "cogs.rtfm", "cogs.asynchowto"]
+startup_extensions = ["cogs.Dev", "cogs.Fun", "cogs.Misc", "cogs.Admin", "cogs.Utility", "cogs.Core", "cogs.Minigames", "cogs.Rtfm", "cogs.Asynchowto"]
     
 for cog in startup_extensions:
         try:
