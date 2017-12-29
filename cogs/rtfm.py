@@ -20,5 +20,19 @@ from bs4 import BeautifulSoup
 import ftfy
 #You don't need all these imports for this file, just was lazy ;p
 
+@bot.command(pass_context=True)
+async def rtfm(ctx, msg : str):
+    em=discord.Embed(color=0x6691D9, description="[{}]({})".format(msg, "http://discordpy.readthedocs.io/en/latest/api.html#discord.Client.{}".format(msg)))
+    em.set_author(name="Client.{}".format(msg), icon_url=ctx.message.author.avatar_url)
+    await bot.say(embed=em)
+
+@bot.command()
+async def rtfm_rewrite():
+    await bot.say("**:mag_right: | http://discordpy.readthedocs.io/en/rewrite/**")
+
+@bot.command()
+async def rtfm_async():
+    await bot.say("**:mag_right: | http://discordpy.readthedocs.io/en/async/**")
+
 def setup(bot): 
     bot.add_cog(Rtfm(bot))
