@@ -189,4 +189,4 @@ async def gbans(ctx):
         await bot.say(embed = embed)
         
 def setup(bot): 
-    bot.add_cog(Admin(bot))
+        bot.add_cog(Admin(bot))
