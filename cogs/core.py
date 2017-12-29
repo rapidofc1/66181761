@@ -259,7 +259,7 @@ async def help_channelinfo():
     h.add_field(name = "Note", value = "Empty...")
     await bot.say(embed = h)
        
- @bot.command()
+@bot.command()
 async def help_userinfo():
     h = discord.Embed(title = "Userinfo Command", color = 0x6691D9, description = "Displays info on the given user")
     h.add_field(name = "Usage", value = "`?userinfo <@user>`")
