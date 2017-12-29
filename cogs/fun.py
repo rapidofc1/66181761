@@ -287,7 +287,7 @@ async def amicool():
     await bot.say(random.choice([":wastebasket:  |  Nothing...", ":tada:  |  Cool!", ":skull_crossbones:  |  Your... well um... you ain\'t cool... sorry...", ":hole:  |  No words to describe you"]))
     
 @bot.command()
-async def starterpack
+async def starterpack():
     embed = discord.Embed(title = "Look at dis", description = "Here is your starterpack.", color = 0x00ff44)
     embed.set_author(name = "Random starterpack")
     embed.set_image(url = (random.choice(["https://cdn.discordapp.com/attachments/385625038444822539/388911898835288064/126.jpg",
