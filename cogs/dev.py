@@ -80,4 +80,4 @@ async def servers(ctx):
       await bot.say(embed = embed) 
        
 def setup(bot): 
-    bot.add_cog(Dev(bot))
+        bot.add_cog(Dev(bot))
