@@ -20,6 +20,8 @@ from bs4 import BeautifulSoup
 import ftfy
 #You don't need all these imports for this file, just was lazy ;p
 
+bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
+
 @bot.command(pass_context=True)
 async def rtfm(ctx, msg : str):
     em=discord.Embed(color=0x6691D9, description="[{}]({})".format(msg, "http://discordpy.readthedocs.io/en/latest/api.html#discord.Client.{}".format(msg)))
