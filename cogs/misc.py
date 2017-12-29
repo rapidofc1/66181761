@@ -20,6 +20,8 @@ from bs4 import BeautifulSoup
 import ftfy
 #You don't need all these imports for this file, just was lazy ;p
 
+bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
+
 @bot.command()
 async def randomcommand():
     rc=discord.Embed(color=0x8f07ff, title="Random Command", description="**?{}**".format(random.choice(tuple(set(command.name for command in bot.commands.values())))))
