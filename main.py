@@ -19,20 +19,20 @@ from bs4 import BeautifulSoup
 import ftfy
 import discord
 from discord.ext import commands
-from cogs import admin, fun, dev, utility, misc, core, minigames, rtfm, asynchowto
+#from cogs import admin, fun, dev, utility, misc, core, minigames, rtfm, asynchowto
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
 bot.remove_command ('help')
 
-extensions = ["commands.dev", 
-              "commands.fun", 
-              "commands.misc", 
-              "commands.admin",
-              "commands.utility", 
-              "commands.core", 
-              "commands.minigames",
-              "commands.rtfm",
-              "commands.asynchowto"]
+#extensions = ["commands.dev", 
+#              "commands.fun", 
+#              "commands.misc", 
+#              "commands.admin",
+#              "commands.utility", 
+#              "commands.core", 
+#              "commands.minigames",
+#              "commands.rtfm",
+#              "commands.asynchowto"]
 
 @bot.event
 async def on_ready():
@@ -41,6 +41,14 @@ async def on_ready():
     print("⭐Bot Ready⭐")
     print("------------")
     
+startup_extensions = ["cogs.dev", "cogs.fun", "cogs.misc", "cogs.admin", "cogs.utility", "cogs.core", "cogs.minigames", "cogs.rtfm", "cogs.asynchowto"]
+    
+for cog in startup_extensions:
+        try:
+                bot.load_extension(cog)
+        except Exception as error:
+                print(str(error))
+  
 @bot.event
 async def on_command_error(error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
