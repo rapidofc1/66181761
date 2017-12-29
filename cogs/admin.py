@@ -18,6 +18,8 @@ import datetime
 import time
 from bs4 import BeautifulSoup
 import ftfy
+import discord
+from discord.ext import commands
 #You don't need all these imports for this file, just was lazy ;p
 
 @bot.command(pass_context=True)
