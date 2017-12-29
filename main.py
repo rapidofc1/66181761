@@ -21,6 +21,16 @@ import ftfy
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
 bot.remove_command ('help')
 
+extensions = ["commands.dev", 
+              "commands.fun", 
+              "commands.misc", 
+              "commands.admin",
+              "commands.utility", 
+              "commands.core", 
+              "commands.minigames",
+              "commands.rtfm",
+              "commands.asynchowto"]
+
 @bot.event
 async def on_ready():
     print("------------")
