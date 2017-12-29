@@ -17,6 +17,7 @@ import datetime
 import time
 from bs4 import BeautifulSoup
 import ftfy
+from cogs import admin, fun, dev, utility, misc, core, minigames, rtfm, asynchowto
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
 bot.remove_command ('help')
