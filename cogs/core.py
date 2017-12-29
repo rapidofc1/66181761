@@ -21,6 +21,7 @@ import ftfy
 #You don't need all these imports for this file, just was lazy ;p
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("?"))
+bot.remove_command ('help')
 
 @bot.command(pass_context=True, aliases=["feedback", "messsgedev", "fb"])
 @commands.cooldown(1, 120, commands.BucketType.user)
