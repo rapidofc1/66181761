@@ -1,5 +1,5 @@
 git+https://github.com/Rapptz/discord.py@async
-aiohttp==1.0.5
+aiohttp==3.7.4
 async==0.6.2
 async-timeout==2.0.0
 asyncio==3.4.3
