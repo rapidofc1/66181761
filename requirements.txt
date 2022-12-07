@@ -8,7 +8,7 @@ beautifulsoup4==4.6.0
 boto3==1.4.8
 botocore==1.8.11
 bs4==0.0.1
-certifi==2017.11.5
+certifi==2022.12.7
 chardet==3.0.4
 clients==0.5
 colorama==0.3.9
